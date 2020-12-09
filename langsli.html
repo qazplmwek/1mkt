@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta  charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+         <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap" rel="stylesheet" />
+       
+        <meta name = "viewport" content = "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>موقع متعدد اللغات</title>
+        <style type="text/css" media="all">
+           *{
+               margin: 0px;
+               transition: 1s left;
+           } 
+           body{
+               background-color: black;
+               
+           }
+            #header{
+                background-image: linear-gradient(to right, black, black);
+                width: 100%;
+                height: 100px;
+                border-bottom: 2px solid grey;
+            }
+            #header img{
+                width: 55px;
+                height: 55px;
+                object-fit: content;
+                border-radius: 50%;
+                position: relative;
+                right:  50%;
+                top: 30%;
+                transform: translate(50%,-30%);
+                
+            }
+            #header h2{
+            
+                font-weight: bold;
+                height: 40px;
+                position: relative;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%,-60%);
+                text-align: center;
+                color: white;
+            }
+            nav{
+                width: 100px;
+                float: right;
+                position: fixed;
+                right: 0%;
+                transform: translateX(-57%);
+                top: 0%;
+            }
+            nav ul{
+                display: flex;
+                justify-content: center;
+            }
+            nav ul li{
+                display: inline-block;
+                margin-left: 5px;
+            }
+            #li1{
+                color :  rgb(50,220,50);
+                background-color: #FFF;
+                padding-top: 1.80px;
+                padding-right: 18px;
+                padding-left: 18px;
+                padding-bottom: px;
+                border-radius: 3px;
+                border: 2px solid rgb(50,220,50);
+                background-color: black;
+                transition: 0.80s background-color , 0.80s color;
+                margin-top: 0px;
+                font-size: 16.70px;
+                
+            }
+            #il2{
+                background-color: #000;
+                padding: 2px;
+                padding-right: 10px;
+                padding-left: 10px;
+                padding-bottom: 8px;
+                border-radius: 3px;
+                border: 2px solid red;
+                font-family: 'Amiri', serif;
+                transition:0.80s background-color , 0.80s color;
+                color: red;
+                wwidth: 51.25px;
+                height: 20px;
+                font-size: 18px;
+            }
+            #li1:hover{
+                background-color:  rgb(50,220,50);
+                color : white;
+                
+                
+            }
+            #il2:hover{
+                background-color: red;
+                color : white;
+            }
+            #thr{
+                text-align: center;
+                font-size: 25px;
+                font-family: 'Amiri', serif;
+                color:white;
+            }
+            
+            #md{
+                text-align: center;
+                font-weight : bold;
+                font-family: 'Amiri', serif;
+                font-size: 17px;
+                color: white;
+            }
+            #asas{
+                overflow: hidden;
+                width: 100%;
+                height: 200px;
+                background-color: rred;
+                position: relative;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%,10%);
+                height: 200px;
+                
+            }
+            #ul2{
+                
+                width: 150%;
+                height: 100%;
+                background-color: black;
+                padding: none;
+                padding-left: none;
+               /* top: 50%;
+                left: 90%;
+                transform: translate(-50%,-50%);*/
+                
+                
+            }
+            iimg{
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+            
+            }
+            #spanas{
+                position: absolute;
+                background-color: #00000036;
+                transition: 0.50s background-color;
+                top: 40%;
+                left: 100%;
+                transform: translateX(-100%);
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                border-radius: 2px;
+                width: 50px;
+            }
+            #spanas:hover{
+                background-color: #000000a8;
+                color: white;
+                
+            }
+            
+            #spanas2{
+                transition: 0.50s background-color;
+                position: absolute;
+                height: 50px;
+                width: 50px;
+                text-align: center;
+                line-height: 50px;
+                border-radius: 2px;
+                position: absolute;
+                background-color: #00000036;
+                top: 40%;
+                left: 1.30%;
+                transform: translateX(0%);
+                
+            
+            }
+            
+            
+             #spanas2:hover{
+                background-color: #000000a8;
+             }
+            #shm{
+                border: 3px solid white;
+                border-left: none;
+                border-bottom: none;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                position: absolute;
+                margin: auto;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                
+                
+            }
+             #shm2{
+                height: 10px;
+                width: 10px;
+                border: 3px solid white;
+                border-left: none;
+                border-bottom: none;
+                width: 10px;
+                height: 10px;
+                transform: rotate(225deg);
+                position: absolute;
+                margin: auto;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                
+                
+            }
+            
+            .asassli{
+                background-color: reed;
+                width: 90%;
+                height: 250px;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,2%);
+            }
+            .absli{
+                margin: 0px 0px 0px 0px;
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+                border: 2px solid rgb(60,14,0) ;
+                display: flex;
+                justify-content: flex-start;
+                overflow: hidden;
+                
+                /*background-repeat: no-repeat; background-size: cover; background-position: center;*/
+            }
+            .sli{
+                bborder: 2px solid green;
+                display: flex;
+                height: 100% ;
+                width: 600%;
+                flex-shrink: 0;
+                transition: all 0.9s;
+                margin: 0px;
+            }
+            .sli section{
+                flex-basis: 20%;
+                flex-shrink: 0;
+                flex: 1;
+                width: 5%;
+                display: flex;
+                align-items: center;
+                color: white;
+                
+            }
+            
+          
+            </style>
+    </head>
+    <body>
+        
+        <header id="header">
+            <!--<img src="https://pbs.twimg.com/profile_images/1269557683520245763/6il7-Ulj.jpg" alt="" />-->
+            <h2 id="tit">موقع متعدد اللغات وبلا اي فائده </h2>
+            
+            <nav id="nav">
+                <ul id="ul">
+                    <li id="li1">العربية</li>
+                    <li id="il2">English</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main tra id="main">
+            <h3 id="thr">¿?ماهي فكرة الموقع</h3>
+            <p id="md">والله حتى انا مدري ياعسل بس شوف فوق فيه زر ترجمه وشوف تحت فيه عارض صور متحركه </p>
+            <div class="asassli">
+                <div class="absli">
+                    <div class="sli">
+                                        
+                <section style="background-image : url(http://3.bp.blogspot.com/-YJ7vMuEEYxo/Vmmyw3XN5UI/AAAAAAAAw-w/Hk6uu7gxQvE/s640/Andromeda-Galaxy-Wallpaper-HD-18.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
+                <section style="background-image : url(https://morb3.com/wp-content/uploads/2020/01/138-iphone-wallpapers-hd-abstract-%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D8%A7%D9%8A%D9%81%D9%88%D9%86-%D8%A7%D9%94%D9%8A%D9%81%D9%88%D9%86-720x1280.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
+               <section style="background-image : url(https://morb3.com/wp-content/uploads/2020/01/2-desktop-wallpapers-hd-4k-%D8%B5%D9%88%D8%B1-%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1-%D8%B3%D8%B7%D8%AD-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-768x513.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
+                <section style="background-image : url(https://quotess.cc/wp-content/uploads/2018/07/4239.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
+                <section style="background-image : url(https://www.teahub.io/photos/full/0-6039_milky-way-wallpapers-galaxy-milky-way-hd.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
+                <section style="background-image : url(https://swall.teahub.io/photos/small/8-83351_galaxy-wallpaper-milky-way-space-background.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;"></section>
+                <!--<li class="item" style="background-image : url(https://quotess.cc/wp-content/uploads/2018/07/4239.jpg);"></li>-->
+           
+                    </div>
+                <div  id="spanas"><span id="shm"></span></div>
+                <div id="spanas2"><span id="shm2"></span></div>
+          
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+                 
+        
+        
+        </main>
+        <footer  id="footer">
+            
+        </footer>
+        
+        <script type="text/javascript" charset="utf-8" />
+            var items = document.querySelector('.sli');
+            var ablsl = document.querySelector(".absli");
+            var cli = document.getElementById('spanas');
+            var cli2 = document.getElementById('spanas2'),
+            thr = document.getElementById("thr"),
+            md = document.getElementById("md");
+            var dir;
+            var li = document.getElementById('li1'),
+            il2=document.getElementById('il2'),
+            tit = document.getElementById("tit");
+     
+           cli.addEventListener("click",next);
+           
+           function next(){
+              if(dir== -1 ){
+                  
+                  
+                items.prepend(items.lastElementChild)
+             
+                  
+                  
+                  
+              }
+             dir= 1;
+               
+               
+            ablsl.style.justifyContent = "flex-start";
+           items.style.transform = "translateX(-16.6666666667%)";
+               
+           }
+         cli2.addEventListener("click",function (){
+             if(dir== 1){
+             items.appendChild(items.firstElementChild)
+             }
+              dir = -1;
+                 
+
+            
+           ablsl.style.justifyContent = "flex-end";
+           items.style.transform = "translate(16.6666666667%)";
+         });
+         
+         
+         //trans
+         items.addEventListener("transitionend",function(){
+             
+             if(dir==1){
+             items.appendChild(items.firstElementChild)
+             }
+             else if(dir== -1){
+                 items.prepend(items.lastElementChild);
+             }
+           items.style.transition ="none";
+           items.style.transform = "translate(0%)";
+           setTimeout(function(){
+           items.style.transition = "all 0.9s";
+               
+          });
+               
+           });
+          
+          
+          
+          
+          li.onclick = ()=>{
+              localStorage.setItem('lang',"ar");
+              lang("ar");
+         
+          }
+          il2.onclick = ()=>{
+              lang("en");
+              localStorage.setItem('lang',"en");
+              
+          }
+          onload = ()=>{
+            
+            lang(localStorage.getItem("lang"))
+            
+            
+          }
+          
+          function lang(lang){
+              
+              if(lang=="ar"){
+                  tit.innerHTML = "موقع متعدد اللغات وبلا اي  فائدة"
+                  thr.innerHTML = "¿?ماهي فكرة الموقع"
+                  md.innerHTML = "والله حتى انا مدري ياعسل بس شوف فوق فيه زر ترجمه وشوف تحت فيه عارض صور متحركه"
+              }
+              else if(lang=="en"){
+                  tit.innerHTML = "Multilingual site without any benefit"
+                  thr.innerHTML = "What is the idea of the site?¿"
+                  md.innerHTML = "By God, even I don’t know, but you will see the Translate button on the top, and look down there, there’s a picture slider"
+              }
+              
+          }
+          
+          
+          
+        </script>
+    </body>
+</html>

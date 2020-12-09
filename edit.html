@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta  charset="utf-8">
+        <meta name = "viewport" content = "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>edit</title>
+        <style type="text/css" media="all">
+            *{
+                margin: 0px;
+                outline: none;
+            }
+            header{
+                display: flex;
+                height: 35px;
+                justify-content: center;
+                
+            }
+            
+            button{
+                background-color: gray;
+                width: 50%;
+                text-align: center;
+                color: white;
+                height: 100%;
+                border: none;
+                
+                font-size: 18px;
+                font-weight: bold;
+                
+                
+                
+            }
+            
+            
+            #cood{
+                
+                border-bottom: 2px solid white;
+            }
+            
+            
+           textarea{
+               background-color: lightslategray;
+               /*    */
+               width: 99%;
+               
+               border: none;
+               height: 84.55vh;
+               color: lavender;
+               font-size: 13px;
+               
+           }
+           #main{
+               margin-top: 0px;
+            display: none;
+               height: 85.50vh;
+               
+           }
+           
+          #out{
+              border-bottom: 2px solid gray;
+          }
+          
+           
+           
+           @media only screen and (min-width:500px){
+               textarea{
+                   width: 100%;
+               }
+           }
+           
+            
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <button id="cood" type="button">cood</button>
+            <button id="out" type="button">out</button>
+        </header>
+        <textarea name="" id="textarea" rows="8" cols="40"><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type"         content="text/html; charset=utf-8" />
+        <title></title>
+        
+    </head>
+    <body>
+        
+    </body>
+</html></textarea>
+        <main id="main">
+            
+        </main>
+        
+        
+        <script type="text/javascript" charset="utf-8">
+            var cood = document.getElementById("cood"),
+            out = document.getElementById("out"),
+            main = document.getElementById("main"),
+            textarea = document.getElementById("textarea");
+            
+            out.onclick = function(){
+                
+                out.style.borderBottom = "2px solid white"
+                cood.style.border = "none"
+                textarea.style.display = "none"
+                main.style.display = "block"
+                main.innerHTML = textarea.value;
+                //alert(textarea.textContent)
+            }
+            cood.onclick = function(){
+                
+                cood.style.borderBottom = "2px solid white"
+                out.style.borderBottom = "2px solid gray"
+                main.style.display = "none"
+                textarea.style.display = "block"
+                
+           
+            }
+                
+            //console.log(Error)
+            
+        </script>
+       
+    </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta  charset="utf-8">
+        <meta name = "viewport" content = "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title></title>
+        <style type="text/css" media="all">
+            #myCanvas{
+                border: 2px solid red;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            body{
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas class="canvas" id="myCanvas" width="350" height="350"></canvas>
+
+    </body>
+    
+    <script type="text/javascript" charset="utf-8">
+        var c = document.getElementById("myCanvas"),
+        context = c.getContext("2d");
+        
+        
+        //requestAnimationFrame(colck);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        var hm = 90;
+        
+        
+        var rad = Math.PI /180;
+       
+        
+
+
+            context.font = "27px  arial"
+            
+            context.translate(c.width>>1,c.height/2);
+            
+            context.lineCap= "round";
+            
+            context.strokeStyle = "rgba(0,0,0,1)"
+           
+            var arg = 0;
+          
+            context.fillStyle = "rgba(0,0,0,1)";
+           
+            context.textAlign = "center";
+            
+            context.textBaseline = "middle"
+           
+           
+            var tn = 127;
+            
+            
+            
+            
+       /*     context.shadowColor = "rgba(0,0,0,0.6)"
+            context.shadowBlur = 7;
+            context.shadowOffsetX = context.shadowOffsetY = 2;
+            
+            arb(14.50,0,117,101,"black")
+            //الساعات
+            
+            arb(8,0,159,45.50,"black")
+            
+            //الدقائق
+           arb(2.50,-26,166,118.30,"red")
+            
+           
+            arb(4.40,-29,-58.20,118.30,"red")
+            
+            
+            
+            context.shadowColor = "rgba(0,0,0,0)";
+            
+                        
+            context.save();
+            context.beginPath();
+            context.arc(0,0,11.60,0,Math.PI *2);
+            context.fillStyle = "rgba(255,0,0,1"
+            context.fill();
+            context.restore();
+            
+            
+            
+            
+          drawback();
+        context.font = " 13px arial"
+        context.fillText('Quartz',0, -82);
+        
+        */
+        
+       
+       requestAnimationFrame(clock)
+       function clock(){
+           
+           context.clearRect(-c.width>>1,-c.height>>1,c.width, c.height)
+           
+           context.font = "27px arial"
+           drawback();
+           context.shadowColor = "rgba(0,0,0,0.6)"
+            context.shadowBlur = 5;
+            context.shadowOffsetX = context.shadowOffsetY = 2;
+            
+          /*  arb(14.50,0,117,har,"black")
+            //الساعات
+            
+            arb(8,0,159,men,"black")*/
+            
+            //الدقائق
+            var data = new Date
+            
+            
+            var Hours = data.getHours();
+            var Minutes = data.getMinutes();
+            Seconds = data.getSeconds();
+            var Milliseconds = data.getMilliseconds();
+            var sec = (Seconds  + Milliseconds / 1000 ) * 6;
+          //  console.log(sec)
+            
+            var men = ( Minutes + Seconds / 60 ) * 6;
+            console.log(men)
+            var har = (Hours + Minutes / 60) * 30;
+            colorh = "red";
+            arb(14.50,0,117,har,"black")
+            //الساعات
+            
+            arb(8,0,159,men,"black")
+            
+            //الدقائق
+            
+            //118.30
+           arb(2.50,-26,166,sec,"red")
+            
+           
+            arb(4.40,-29,-58.20,sec,"red")
+           
+            
+            
+            context.shadowColor = "rgba(0,0,0,0)";
+            
+                        
+            context.save();
+            context.beginPath();
+            context.arc(0,0,11.60,0,Math.PI *2);
+            context.fillStyle = "rgba(255,0,0,1"
+            context.fill();
+            context.restore();
+            
+            
+       //   context.font = "27px arial"
+        // drawback();
+         
+        context.font = " 13px arial"
+        context.fillText('Quartz',0, -82);
+       // drawback();
+        
+           
+           
+           
+           
+           
+           
+        requestAnimationFrame(clock)  
+        console.log(data.getSeconds())
+       }
+       
+       
+       
+       
+       
+        function arb(lineWidth,star,end,rot,color){
+            
+            
+            
+           /* context.save();
+            context.beginPath();
+            context.arc(0,0,11.60,0,Math.PI *2);
+            context.fillStyle = "rgba(255,0,0,1"
+            context.fill();
+            context.restore();*/
+            
+            
+            
+            context.save();
+            context.lineWidth = lineWidth;
+            
+            context.beginPath();
+            context.rotate((rot-90)*rad)
+            context.moveTo(star,0);
+            context.lineTo(end,0)
+            context.strokeStyle = color;
+            context.stroke();
+            context.rotate(-(rot-90)*rad)
+            context.restore();
+            
+            
+        }
+        
+        function drawback(){
+            var arg = 0;
+            var tn = 127;
+            for(var i=1,x; i<61; i++){
+                context.rotate(6 * rad)
+                arg += 4.25;
+               if( i%5 == 0){
+                 x = 149;
+                
+                context.lineWidth = 7;
+                
+                context.rotate(-hm*rad)
+                context.translate(tn,0)
+                context.rotate(-i/5*30 * rad + hm * rad);
+                context.fillText(i/5,0,0);
+                context.rotate(i /5 *30 * rad + -hm * rad);
+                context.translate(-tn,0)
+                context.rotate(hm * rad)
+                
+            }
+            
+            else{
+                var x = 159;
+                context.lineWidth = 3.5;
+            }
+            
+            context.beginPath();
+            context.moveTo(x, 0);
+            context.lineTo(168, 0);
+            context.stroke();
+           
+        
+            
+            
+            
+            
+        }
+        
+        }
+        
+        
+        
+        
+        
+    </script>
+</html>
